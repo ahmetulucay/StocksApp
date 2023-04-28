@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocksApp", "StocksApp\StocksApp.csproj", "{3E93ECA9-71EB-4EC3-8554-9491211586AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E93ECA9-71EB-4EC3-8554-9491211586AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E93ECA9-71EB-4EC3-8554-9491211586AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E93ECA9-71EB-4EC3-8554-9491211586AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E93ECA9-71EB-4EC3-8554-9491211586AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14BB22EC-0D03-420A-B35C-104D5AFFA543}
+	EndGlobalSection
+EndGlobal
