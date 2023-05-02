@@ -17,18 +17,21 @@
     min-width: 500px;
 }
 
-.navbar
+.app-title
 {
-    background-color: #cacaca;
-    padding: 10px;
-    box-shadow: 0px 1px 2px 2px #cacaca;
+    font-size: 1.9em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
 }
 
-.navbar-brand
+.login-button
 {
-    margin: 0px 30px 5px 5px;
-    font-size: 1.1em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 16px;
+}
+
+.navbar
+{
+    padding: 10px;
 }
 
 .navbar > ul
@@ -42,15 +45,15 @@
     width: 100%;
 }
 
+
 .navbar > ul > li > a:link, .navbar > ul > li > a:visited
 {
     padding: 4px 8px;
     cursor: pointer;
-    border-radius: 6px;
     transition: background-color 0.4s;
     display: inline-block;
     margin: 0px 3px;
-    color: #1383a4;
+    color: #0e5eba;
     text-decoration: none;
 }
 
@@ -60,52 +63,31 @@
     color: #086581;
 }
 
+.nav-active:before
+{
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: -2px;
+    height: 1px;
+    width: 50%; /* or 100px */
+    border-bottom: 2px solid #626262;
+}
+
 .nav-active
 {
-    background-color: #ececec;
+    position: relative;
 }
 
 .page-content
 {
-    padding: 10px;
     min-height: 90vh;
+    padding: 15px 20px;
 }
 
 .full-size-height
 {
     min-height: 100vh;
-}
-
-.border-left
-{
-    border-left: 2px solid #cacaca;
-}
-
-.padding-left
-{
-    padding-left: 20px;
-}
-
-.margin-left
-{
-    margin-left: 30px;
-}
-
-.margin-top
-{
-    margin-top: 10px;
-}
-
-a:link, a:visited
-{
-    color: blue;
-    text-decoration: none;
-    display: inline-block;
-}
-
-a:hover
-{
-    text-decoration: underline;
 }
 
 .table
@@ -120,8 +102,8 @@ a:hover
 
 .table thead
 {
-    background-color: #727774;
-    color: #ffffff;
+    background-color: #bcd5c6;
+    color: #000000;
 }
 
 .table thead th
@@ -144,8 +126,7 @@ a:hover
 
 .table tbody tr:hover
 {
-    background-color: #01759d;
-    color: #ffffff;
+    background-color: #83b8cb;
 }
 
 .w-25
@@ -153,14 +134,19 @@ a:hover
     width: 25%;
 }
 
-.w-30
+.w-40
 {
-    width: 30%;
+    width: 40%;
 }
 
 .w-50
 {
     width: 50%;
+}
+
+.w-60
+{
+    width: 60%;
 }
 
 .w-75
@@ -178,19 +164,72 @@ a:hover
     width: 100%;
 }
 
-.padding-left-45
+.mt
 {
-    padding-left: 45px;
+    margin-top: 10px;
 }
 
-.margin-top-200
+.mb
 {
-    margin-top: 200px !important;
+    margin-bottom: 10px;
 }
 
-.inline-block
+
+.m
 {
-    display: inline-block;
+    margin: 10px;
+}
+
+.ml
+{
+    margin-left: 20px;
+}
+
+.mr
+{
+    margin-right: 10px;
+}
+
+.p
+{
+    padding: 10px;
+}
+
+.pt
+{
+    padding-top: 10px;
+}
+
+.pb
+{
+    padding-bottom: 10px;
+}
+
+
+.pl
+{
+    padding-left: 10px;
+}
+
+.pr
+{
+    padding-right: 10px;
+}
+
+
+.grey-back
+{
+    background-color: #dcdcdc;
+}
+
+.white-back
+{
+    background-color: #ffffff;
+}
+
+.text-blue
+{
+    color: #0349a3;
 }
 
 .text-green
@@ -205,17 +244,7 @@ a:hover
 
 .text-grey
 {
-    color: #a3a3a3;
-}
-
-.text-dark-grey
-{
-    color: #585858ff;
-}
-
-.cursor-pointer
-{
-    cursor: pointer;
+    color: #929292;
 }
 
 .text-left
@@ -238,11 +267,6 @@ a:hover
     margin: auto;
 }
 
-.margin-bottom
-{
-    margin-bottom: 20px;
-}
-
 .float-left
 {
     float: left;
@@ -255,19 +279,37 @@ a:hover
 
 .blue-back
 {
-    background-color: #6cb7e6;
+    background-color: #9ad3f7;
 }
 
-.green-back
+
+.list-container
 {
-    background-color: #e0ff8f;
+    margin-top: 9px;
 }
 
-.orange-back
+.list
 {
-    background-color: #faca70;
+    list-style-type: none;
+    background-color: #ececec;
+    border: 1px solid #ececec;
+    border-radius: 8px;
 }
 
+.list > li
+{
+    padding: 8px 12px;
+    background-color: #ffffff;
+    margin: 3px 2px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.list > li:hover
+{
+    background-color: #1383a4;
+    color: #ffffff;
+}
 
 .footer-content
 {
@@ -285,52 +327,297 @@ a:hover
     text-align: center;
 }
 
+.border-bottom
+{
+    border-bottom: 2px solid #7a7a7a;
+    margin-bottom: 6px;
+}
+
+.border-top
+{
+    border-top: 2px solid #7a7a7a;
+    margin-top: 6px;
+}
+
+.border-left
+{
+    border-left: 1px solid #bfbfbf;
+}
+
+.border-right
+{
+    border-right: 1px solid #bfbfbf;
+}
+
+
 .box
 {
-    /*margin: 10px 20px;*/
+    margin: 10px 20px;
     padding: 15px;
     border-radius: 8px;
     border: 2px solid #d3d1d1;
     box-shadow: 0px 0px 3px 2px #ffffff;
-    min-width: 400px;
+}
+
+.flex-direction-vertical
+{
+    flex-direction: column;
 }
 
 .flex
 {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 20px;
     align-content: stretch;
     align-items: stretch;
 }
 
 .flex > div
 {
-    padding: 15px;
+    padding: 4px;
+}
+
+.flex-1
+{
+    flex: 1 auto;
+}
+
+.flex-2
+{
+    flex: 2 auto;
+}
+
+.flex-3
+{
+    flex: 3 auto;
+}
+
+.flex-4
+{
+    flex: 4 auto;
+}
+
+.flex-5
+{
+    flex: 5 auto;
+}
+
+.flex-6
+{
+    flex: 6 auto;
+}
+
+a:link, a:visited
+{
+    color: blue;
+}
+
+a.link-hover:link
+{
+    padding: 5px;
+    border-radius: 9px;
+    transition: background-color 0.2s;
+}
+
+a.link-hover:hover
+{
+    background-color: #e5e5e5;
+}
+
+.button
+{
+    padding: 8px 12px;
+    border: 2px solid #cacaca;
     border-radius: 8px;
-    border: 2px solid #d3d1d1;
-    box-shadow: 0px 0px 3px 2px #ffffff;
+    outline: 3px solid #ffffff;
+    font-size: 101%;
 }
 
-.flex-borderless
+.button-blue-back
 {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: stretch;
-    align-items: stretch;
+    background-color: #3a81bd;
+    color: #ffffff;
+    border: 2px solid #3f80ca;
 }
 
-.flex-borderless > div
+.button-blue-back:hover
 {
-    padding: 15px;
+    background-color: #1274c7;
 }
+
+.button-green-back
+{
+    background-color: #088e36;
+    color: #ffffff;
+    border: 2px solid #73d695;
+}
+
+.button-green-back:hover
+{
+    background-color: #066627;
+}
+
+.button-red-back
+{
+    background-color: #cb511e;
+    color: #ffffff;
+    border: 2px solid #e49776;
+}
+
+.button-red-back:hover
+{
+    background-color: #96370f;
+}
+
+
+.button-panel
+{
+    margin-top: 20px;
+}
+
+
+.search-text
+{
+    padding: 8px 10px;
+    font-size: 105%;
+    border-radius: 20px;
+    border: 1px solid #d0d0d0;
+    margin-right: 20px;
+    transition: box-shadow 0.2s;
+}
+
+.form-input
+{
+    padding: 8px 10px;
+    font-size: 105%;
+    border-radius: 8px;
+    border: 1px solid #d0d0d0;
+    width: 100%;
+    transition: box-shadow 0.2s;
+}
+
+.form-input:focus
+{
+    outline: none;
+    border: 1px solid #245eb0;
+    box-shadow: 0px 0px 4px 0px #1383a4;
+}
+
+.form-label
+{
+    display: inline-block;
+}
+
+.center-box
+{
+    margin: auto;
+    width: 90%;
+}
+
+.form-field > div:first-child
+{
+    flex: 1;
+    width: auto;
+}
+
+.form-field > div:nth-child(2)
+{
+    flex: 1;
+    width: auto;
+}
+
+.form-field
+{
+    flex-direction: column;
+    margin-bottom: 6px;
+}
+
+#top-bar-div
+{
+    flex-direction: column;
+}
+
+#search-box-div
+{
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.trading-button
+{
+    padding: 10px 15px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.stock
+{
+    margin-top: 20px;
+}
+
+.stock-title
+{
+    font-size: 2.2em;
+    color: #0a8ac6;
+}
+
+.stock-price
+{
+    font-size: 4.5em;
+}
+
+.trading-panel
+{
+    background-color: #f0f0f0;
+}
+
+.trading-panel-flex
+{
+    flex-direction: column;
+}
+
+
+#stock-price-panel
+{
+    width: 100%;
+    max-width: 100%;
+    flex: 1 0 auto;
+    padding-right: 20px;
+}
+
+#new-order-panel
+{
+    padding-left: 5px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-right: 5px;
+    flex: 1 0 auto;
+    border-left: 1px solid #bfbfbf;
+}
+
+.orders-list
+{
+    flex-direction: column;
+}
+
+#buy-orders-list, #sell-orders-list
+{
+    flex: 1 auto;
+}
+
 
 @media screen and (min-width: 1000px)
 {
-    .navbar-brand
+    #top-bar-div
     {
-        display: inline-block;
-        margin-bottom: 0px;
+        flex-direction: row;
+    }
+
+    #search-box-div
+    {
+        text-align: right;
     }
 
     .navbar > ul
@@ -343,5 +630,55 @@ a:hover
     {
         display: inline-block;
         width: auto;
+    }
+
+    #stock-price-panel
+    {
+        flex: 2 0 auto;
+        max-width: 65%;
+    }
+
+    #new-order-panel
+    {
+        padding-left: 90px;
+        padding-top: 20px;
+        flex: 1 0 auto;
+    }
+
+    .trading-panel-flex
+    {
+        flex-direction: row;
+        /*color: */
+    }
+
+    .center-box
+    {
+        width: 70%;
+        margin: auto;
+    }
+
+    .form-field > div
+    {
+        padding: 15px !important;
+    }
+
+    .form-field > div:first-child
+    {
+        flex: 1 !important;
+    }
+
+    .form-field > div:nth-child(2)
+    {
+        flex: 3 !important;
+    }
+
+    .form-field
+    {
+        flex-direction: row;
+    }
+
+    .orders-list
+    {
+        flex-direction: row;
     }
 }
