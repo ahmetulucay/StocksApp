@@ -5,18 +5,20 @@ namespace StocksApp.Services;
 public class FinnhubService : IFinnhubService
 {
     private readonly IHttpClientFactory _httpClientFactory;
-    public FinnhubService(IHttpClientFactory httpClientFactory)
+    private readonly IConfiguration _configuration;
+    public FinnhubService(IHttpClientFactory httpClientFactory, IConfiguration configuration)
     {
         _httpClientFactory = httpClientFactory;
+        _configuration = configuration;
     }
 
-    public async Task<Dictionary<string, object>> GetStockPriceQuote()
+    public async Task<Dictionary<string, object>?> GetStockPriceQuote(string stockSymbol)
     {
         using (HttpClient httpClient = _httpClientFactory.CreateClient())
         {
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage()
             {
-                RequestUri = new Uri("https://finnhub.io/api/v1/quote?symbol=MSFT&token=ch6bt31r01qo6f5d9aigch6bt31r01qo6f5d9aj0"),
+                RequestUri = new Uri($"https://finnhub.io/api/v1/quote?symbol={stockSymbol}&token={_configuration["FinnhubToken"]}"),
                 Method = HttpMethod.Get
             };
 
@@ -39,10 +41,5 @@ public class FinnhubService : IFinnhubService
 
             return responseDictionary;
         }
-    }
-
-    public Dictionary<string, object> GetStockPriceQuote(string stockSymbol)
-    {
-        throw new NotImplementedException();
     }
 }
